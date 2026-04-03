@@ -5,7 +5,7 @@
 ![Flask](https://img.shields.io/badge/Backend-Flask-000000?logo=flask&logoColor=white)
 ![Jenkins](https://img.shields.io/badge/Build-Jenkins-D24939?logo=jenkins&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green)
+![License](https://img.shields.io/badge/License-MIT-green)  
 
 > A production-grade DevOps implementation for ACEest Fitness & Gym — a rapidly scaling startup. This project demonstrates a complete CI/CD lifecycle using Flask, Docker, Pytest, GitHub Actions, and Jenkins.
 
