@@ -1,3 +1,5 @@
+
+#db entity
 from database import db
 
 class Client(db.Model):
