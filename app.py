@@ -195,7 +195,7 @@ def init_db():
         try:
             with app.app_context():
                 db.create_all()
-                print("✅ Tables created successfully")
+                print("Tables created successfully")
                 return
         except OperationalError as e:
             print(f" DB not ready... retrying ({10 - retries + 1}/10)")
