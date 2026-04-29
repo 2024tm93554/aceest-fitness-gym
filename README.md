@@ -1,3 +1,4 @@
+
 #  ACEest Fitness & Gym — Automated CI/CD Pipeline
 
 ![CI/CD Pipeline](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2088FF?logo=github-actions&logoColor=white)
@@ -396,6 +397,53 @@ Multi-stage pipeline that automates the full delivery lifecycle:
 | SonarQube Analysis | Static code analysis & quality gate |
 | Docker Build & Push | Builds image and pushes to Docker Hub |
 | Deploy | Applies Kubernetes manifests to Minikube |
+
+
+<img width="1600" height="625" alt="jenkins_crop" src="https://github.com/user-attachments/assets/8bb06381-8ede-4a48-a2b6-1d8e8ab8785f" />
+
+Sonarqube Analzes:
+
+Integrated SonarQube for static code analysis to monitor code health, identify security vulnerabilities, and ensure maintainability standards.
+<img width="1600" height="791" alt="585328761-0a20b662-ef24-488c-add5-be3007d9c003" src="https://github.com/user-attachments/assets/ea5a5343-7e40-40ad-aa62-e3a619fcd702" />
+
+
+Sonarqube
+Docker Hub:
+
+Automated the creation of Docker images and their publication to Docker Hub, ensuring consistent environment packaging.
+
+docker pull 2024tm93554/aceest-fitness:latest
+
+docker pull 2024tm93554/aceest-fitness:v1
+
+<img width="1600" height="870" alt="WhatsApp Image 2026-04-29 at 5 30 09 PM" src="https://github.com/user-attachments/assets/fbc83233-5aa9-4934-926a-a92fbf5b1039" />
+Minikube:
+
+Managed application workloads on a Minikube Kubernetes cluster, utilizing pods and services for scalable infrastructure.
+
+<img width="1206" height="335" alt="585331713-e1991c1d-68e8-4057-822a-6168a8a5e526" src="https://github.com/user-attachments/assets/489cebb0-ad87-4505-bdda-c5aefa1b3aa5" />
+
+Kubernetes Pods:
+
+minikube start
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/service.yaml
+kubectl get pods
+kubectl get svc
+
+<img width="1213" height="261" alt="585332419-31194a9b-c0c7-4e75-bce3-8fd5b9f73ca1" src="https://github.com/user-attachments/assets/a7af60db-f84b-40b0-b133-df7248532700" />
+
+Deployment Strategy:
+
+Implemented a Blue-Green Deployment strategy to facilitate seamless updates and instant rollback capabilities without service interruption.
+
+Seamless zero-downtime updates with instant rollback capability.
+
+Traffic → Service (selector: version=blue)
+                ↓ switch
+Traffic → Service (selector: version=green)
+<img width="1920" height="1080" alt="585344614-480ca89e-7493-48bb-9041-a8d964a017ed" src="https://github.com/user-attachments/assets/2c579238-e727-4738-a85d-c38691115d16" />
+<img width="1920" height="1080" alt="585343549-c8b6a74b-21d3-49b8-bbca-c144172b5cf8" src="https://github.com/user-attachments/assets/58fe94a9-c660-4fda-ab78-8e5ce4365883" />
 
 
 
