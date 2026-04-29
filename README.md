@@ -347,6 +347,7 @@ Developer Workstation
                Ready for Deployment
 ```
 
+
 ### Key Design Decisions
 
 | Decision | Rationale |
@@ -376,4 +377,25 @@ Please ensure all tests pass and the Docker build succeeds before submitting a P
 **ACEest Fitness & Gym — Junior DevOps Engineer**
 
 ---
+
+
+## Assignment - 2
+
+GitHub Push → Jenkins (Build) → Pytest → SonarQube → Docker Build → Docker Hub → Kubernetes Deploy
+**Jenkins Stages**
+Orchestrated a multi-stage Jenkins pipeline that automates the lifecycle from code checkout and dependency installation to linting, testing, and final deployment.
+
+Multi-stage pipeline that automates the full delivery lifecycle:
+
+| Stage | Description |
+|-------|-------------|
+| Checkout | Pulls latest code from GitHub |
+| Install Dependencies | Installs Python packages from requirements.txt |
+| Lint | Runs flake8 for code style checks |
+| Test | Executes Pytest unit tests |
+| SonarQube Analysis | Static code analysis & quality gate |
+| Docker Build & Push | Builds image and pushes to Docker Hub |
+| Deploy | Applies Kubernetes manifests to Minikube |
+
+
 
