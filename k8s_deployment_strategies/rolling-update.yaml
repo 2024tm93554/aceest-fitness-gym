@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: aceest
-        image: nginx:latest
+        image: joykiruba/aceest:latest
         ports:
         - containerPort: 80
